@@ -28,7 +28,7 @@ in {
 
     username = "joshua";
     userFullName = "Joshua Myers";
-    homeDirectory = /home/joshua;
+    #homeDirectory = /home/joshua;
     hashedPassword = "$y$j9T$znk1fsAZICHGvKfmpJ.YW0$Tmuri1LBVKz/NhX4BkkPs6ga1yeSNMYiY3wciTwkgk4";
   };
 

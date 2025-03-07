@@ -13,11 +13,11 @@ in {
       	type = lib.types.str;
       };
 
-      homeDirectory = lib.mkOption {
-      	description = "The path to the user's home directory";
-      	type = lib.types.path;
-      	default = /home/${myNixos.username};
-      };
+	#homeDirectory = lib.mkOption {
+	#description = "The path to the user's home directory";
+	#type = lib.types.path;
+	#default = /home/${myNixos.username};
+      #};
 
       hashedPassword = lib.mkOption {
       	description = "The hashed password for the user";

@@ -77,7 +77,7 @@ in {
       name = myNixos.username;
       description = myNixos.userFullName;
       hashedPassword = myNixos.hashedPassword;
-      home = myNixos.homeDirectory;
+      #home = myNixos.homeDirectory;
       createHome = true;
       isNormalUser = true;
       extraGroups = [ "wheel" ];
