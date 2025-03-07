@@ -1,5 +1,5 @@
 { lib, ... }: {
-  imports = [
+  imports = lib.flatten [
     (map lib.custom.relativeToRoot [
       "modules/home-manager"
     ])
