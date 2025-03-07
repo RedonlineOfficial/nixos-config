@@ -17,7 +17,7 @@
 	  });
 	};
 
-	modules = [ ./host/nixos/${host} ];
+	modules = [ ./hosts/nixos/${host} ];
       };
     };
 
