@@ -2,7 +2,8 @@
   imports = [
     ./common/core
 
-    ./common/optional/desktop/hypr/hyprland
+    ./common/optional/desktops/hypr/hyprland
+
 
   ];
 
