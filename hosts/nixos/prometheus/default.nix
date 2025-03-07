@@ -1,7 +1,7 @@
 { config, lib, inputs, ... }: let 
   inherit (config) myNixos;
 in {
-  imports = [
+  imports = lib.flatten [
     inputs.hardware.nixosModules.lenovo-thinkpad-x1-yoga
 
     ./hardware-configuration.nix
