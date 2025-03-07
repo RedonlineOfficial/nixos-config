@@ -1,7 +1,7 @@
 { config, lib, inputs, outputs, pkgs, ... }: let
   inherit (config) myNixos;
 in {
-  imports = [
+  imports = lib.flatten [
     inputs.disko.nixosModules.disko
     inputs.home-manager.nixosModules.home-manager
 
