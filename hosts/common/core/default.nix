@@ -31,12 +31,12 @@ in {
       max-free = 5000000000; # 5GB
 
       auto-optimise-store = true;
-    };
 
-    # Misc
-    warn-dirty = false;
-    trusted-users = ["@wheel"];
-    experimental-features = ["nix-command" "flakes"];
+      # Misc
+      warn-dirty = false;
+      trusted-users = ["@wheel"];
+      experimental-features = ["nix-command" "flakes"];
+    };
   };
 
   # --- Nixpkgs --- #
