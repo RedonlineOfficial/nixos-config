@@ -1,4 +1,4 @@
-{ config, lib, ... }: let
+{ config, lib, pkgs, ... }: let
   inherit (config) myNixos;
 in {
   config = lib.mkIf myNixos.isDesktop {
