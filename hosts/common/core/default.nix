@@ -81,7 +81,7 @@ in {
       createHome = true;
       isNormalUser = true;
       extraGroups = [ "wheel" ];
-      shell = pkgs.zsh;
+      #shell = pkgs.zsh;
     };
   };
 
