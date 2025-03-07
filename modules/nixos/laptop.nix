@@ -10,8 +10,10 @@ in {
       thermald.enable = true;
       tlp = {
 	enable = true;
-	START_CHARGE_THRESH_BAT0 = 65; # 40 and below it starts to charge
-	STOP_CHARGE_THRESH_BAT0 = 90; # 80 and above it stops charging
+	settings = {
+	  START_CHARGE_THRESH_BAT0 = 65; # 40 and below it starts to charge
+	  STOP_CHARGE_THRESH_BAT0 = 90; # 80 and above it stops charging
+	};
       };
     };
   };
