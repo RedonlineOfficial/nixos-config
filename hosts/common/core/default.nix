@@ -95,6 +95,6 @@ in {
       inherit (config) myNixos;
     };
 
-    users.${myNixos.username} = import lib.custom.relativeToRoot "home/${myNixos.username}/${myNixos.hostname}.nix";
+    users.${myNixos.username} = import (lib.custom.relativeToRoot "home/${myNixos.username}/${myNixos.hostname}.nix");
   };
 }
