@@ -31,10 +31,6 @@
 
     overlays = import ./overlays { inherit inputs; };
 
-    commonModules = import ./modules/common;
-    nixosModules = import ./modules/common;
-    homeModules = import ./modules/common;
-
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
   };
 
