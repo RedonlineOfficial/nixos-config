@@ -32,5 +32,6 @@ in {
     hashedPassword = "$y$j9T$znk1fsAZICHGvKfmpJ.YW0$Tmuri1LBVKz/NhX4BkkPs6ga1yeSNMYiY3wciTwkgk4";
   };
 
+  system.stateVersion = "24.11";
 
 }
