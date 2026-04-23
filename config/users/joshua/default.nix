@@ -1,8 +1,5 @@
 { self, inputs, ... }: {
   flake.nixosModules.userJoshua = { ... }: {
-    imports = [
-      self.nixosModules.profilesCommon
-    ];
     users.users.joshua = {
       isNormalUser = true;
       description = "Joshua Myers";
