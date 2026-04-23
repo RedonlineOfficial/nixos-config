@@ -1,5 +1,8 @@
 { self, inputs, ... }: {
   flake.nixosModules.userJoshua = { ... }: {
+    imports = [
+      self.nixosModules.profilesCommon
+    ];
     users.users.joshua = {
       isNormalUser = true;
       description = "Joshua Myers";
@@ -10,6 +13,10 @@
   };
 
   flake.homeConfigurations.userJoshua = inputs.home-manager.lib.homeManagerConfiguration {
+    modules = [ 
+      self.homeModules.profilesCommon
+      self.homeModules.userJoshuaHome 
+    ];
     pkgs = import inputs.nixpkgs {
       system = "x86_64-linux";
       config.allowUnfree = true;
@@ -17,6 +24,5 @@
 
     extraSpecialArgs = { inherit inputs self; };
 
-    modules = [ self.homeModules.userJoshuaHome ];
   };
-}
+

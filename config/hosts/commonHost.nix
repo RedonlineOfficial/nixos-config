@@ -30,6 +30,7 @@
     # ── Imports ────────────────────────────────────────────────────────────
     imports = [
       self.nixosModules.home-manager
+      self.nixosModules.profilesCommon
     ];
 
     # ── Boot Config ────────────────────────────────────────────────────────
