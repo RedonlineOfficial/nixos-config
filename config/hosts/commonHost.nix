@@ -27,6 +27,11 @@
   #   COMMON HOST MODULE
   # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   flake.nixosModules.hostCommon = { pkgs, ... }: {
+    # ── Imports ────────────────────────────────────────────────────────────
+    imports = [
+      self.nixosModules.home-manager
+    ];
+
     # ── Boot Config ────────────────────────────────────────────────────────
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
