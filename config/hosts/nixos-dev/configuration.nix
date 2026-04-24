@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.nixos-devConfiguration = { ... }: {
+  flake.nixosModules.hostNixos-devConfiguration = { ... }: {
     imports = [];
 
     networking.hostName = "nixos-dev";
