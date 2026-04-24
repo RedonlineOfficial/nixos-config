@@ -1,6 +1,17 @@
-{ self, inputs, ... }: {
+{
+  self,
+  inputs,
+  ...
+}: {
   flake-file.inputs = {
     nvf.url = "github:notashelf/nvf";
+  };
+
+  flake.nixosModules.neovim = {pkgs, ...}: {
+    environment.systemPackages = with pkgs; [
+      neovim
+      alejandra
+    ];
   };
 
   flake.homeModules.neovim = {...}: {
@@ -18,7 +29,6 @@
         vim = {
           vimAlias = true;
           theme.transparent = true;
-        
         };
       };
     };

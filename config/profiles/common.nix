@@ -1,12 +1,17 @@
-{ self, inputs, ... }: {
-  flake.nixosModules.profilesCommon = { ... }: {
+{
+  self,
+  inputs,
+  ...
+}: {
+  flake.nixosModules.profilesCommon = {...}: {
     imports = [
       self.nixosModules.git
       self.nixosModules.ssh
+      self.nixosModules.neovim
     ];
   };
 
-  flake.homeModules.profilesCommon = { ... }: {
+  flake.homeModules.profilesCommon = {...}: {
     imports = [
       self.homeModules.git
       self.homeModules.neovim
