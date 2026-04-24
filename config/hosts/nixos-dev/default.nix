@@ -5,6 +5,7 @@
     modules = [
       self.nixosModules.hostCommon
       self.nixosModules.hostNixos-devConfiguration
+      self.nixosModules.hostNixos-devHardware
       self.nixosModules.userJoshua
     ];
   };
