@@ -22,4 +22,5 @@
     extraSpecialArgs = { inherit inputs self; };
 
   };
+}
 
