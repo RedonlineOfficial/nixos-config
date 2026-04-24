@@ -3,7 +3,7 @@
   inputs,
   ...
 }: {
-  flake.homeModules.nixosKeymaps = {...}: {
+  flake.homeModules.neovimKeymaps = {...}: {
     programs.nvf.settings.vim = {
       globals.mapleader = " ";
 
