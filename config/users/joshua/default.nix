@@ -11,7 +11,6 @@
 
   flake.homeConfigurations.userJoshua = inputs.home-manager.lib.homeManagerConfiguration {
     modules = [ 
-      self.homeModules.profilesCommon
       self.homeModules.userJoshuaHome 
     ];
     pkgs = import inputs.nixpkgs {
