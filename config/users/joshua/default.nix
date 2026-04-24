@@ -6,7 +6,7 @@
       extraGroups = [ "networkmanager" "wheel" ];
     };
 
-    home-manager.users."joshua".imports = [ self.homeModules.userJoshuaHome ];
+    home-manager.users."joshua".imports = [ self.homeModules.joshuaHome ];
   };
 
   flake.homeConfigurations.joshua = inputs.home-manager.lib.homeManagerConfiguration {
