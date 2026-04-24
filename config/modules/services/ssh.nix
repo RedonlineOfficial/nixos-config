@@ -12,5 +12,8 @@
     programs.ssh = {
       startAgent = true;
     };
+    environment.sessionVariables = {
+      SSH_AUTH_SOCK = "/run/user/$UID/ssh-agent";
+    };
   };
 }
