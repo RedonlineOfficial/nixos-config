@@ -73,19 +73,19 @@
           desc = "Force quit";
         };
       };
-    };
 
-    maps.visual = {
-      # Move selected text up/down
-      "J" = {
-        action = ":m '>+1<CR>gv=gv";
-        silent = true;
-        desc = "Move selection down";
-      };
-      "K" = {
-        action = ":m '<-2<CR>gv=gv";
-        silent = true;
-        desc = "Move selection up";
+      maps.visual = {
+        # Move selected text up/down
+        "J" = {
+          action = ":m '>+1<CR>gv=gv";
+          silent = true;
+          desc = "Move selection down";
+        };
+        "K" = {
+          action = ":m '<-2<CR>gv=gv";
+          silent = true;
+          desc = "Move selection up";
+        };
       };
     };
   };
