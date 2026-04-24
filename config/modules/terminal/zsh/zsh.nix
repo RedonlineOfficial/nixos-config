@@ -19,6 +19,7 @@
     config = {
       environment.systemPackages = [pkgs.zsh];
       users.users.${config.modules.zsh.user}.shell = pkgs.zsh;
+      programs.zsh.enable = true;
     };
   };
 
