@@ -11,5 +11,8 @@
       useGlobalPkgs = true;
       useUserPackages = true;
     };
+    
+    environment.systemPackages = [inputs.home-manager.packages.x86_64-linux.default];
   };
+
 }
