@@ -81,23 +81,23 @@
         ttimeoutlen = 0;
       };
 
-    luaConfigRC.options = ''
-      -- Append to existing options
-      vim.opt.iskeyword:append("-")
-      vim.opt.path:append("**")
-      vim.opt.diffopt:append("linematch:60")
+      luaConfigRC.options = ''
+        -- Append to existing options
+        vim.opt.iskeyword:append("-")
+        vim.opt.path:append("**")
+        vim.opt.diffopt:append("linematch:60")
 
-      -- Undo directory
-      local undodir = vim.fn.expand("~/.local/share/nvim/undodir")
-      if vim.fn.isdirectory(undodir) == 0 then
-        vim.fn.mkdir(undodir, "p")
-      end
-      vim.opt.undodir = undodir
+        -- Undo directory
+        local undodir = vim.fn.expand("~/.local/share/nvim/undodir")
+        if vim.fn.isdirectory(undodir) == 0 then
+          vim.fn.mkdir(undodir, "p")
+        end
+        vim.opt.undodir = undodir
 
-      vim.api.nvim_create_user_command("Format", function()
-        require("conform").format({ async = true })
-      end, {})
-    '';
-
+        vim.api.nvim_create_user_command("Format", function()
+          require("conform").format({ async = true })
+        end, {})
+      '';
+    };
   };
 }
