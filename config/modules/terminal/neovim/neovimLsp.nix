@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.neovimLsp = {...}: {
+  flake.homeModules.neovimLsp = {...}: {
     programs.vim = {
       lsp.enable = true;
 
