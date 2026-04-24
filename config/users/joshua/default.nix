@@ -1,25 +1,27 @@
-{ self, inputs, ... }: {
-  flake.nixosModules.userJoshua = { ... }: {
+{
+  self,
+  inputs,
+  ...
+}: {
+  flake.nixosModules.userJoshua = {...}: {
     users.users.joshua = {
       isNormalUser = true;
       description = "Joshua Myers";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = ["networkmanager" "wheel"];
     };
 
-    home-manager.users."joshua".imports = [ self.homeModules.joshuaHome ];
+    home-manager.users."joshua".imports = [self.homeModules.joshuaHome];
   };
 
   flake.homeConfigurations.joshua = inputs.home-manager.lib.homeManagerConfiguration {
-    modules = [ 
-      self.homeModules.joshuaHome 
+    modules = [
+      self.homeModules.joshuaHome
     ];
     pkgs = import inputs.nixpkgs {
       system = "x86_64-linux";
       config.allowUnfree = true;
     };
 
-    extraSpecialArgs = { inherit inputs self; };
-
+    extraSpecialArgs = {inherit inputs self;};
   };
 }
-

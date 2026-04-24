@@ -1,4 +1,8 @@
-{ self, inputs, ... }: {
+{
+  self,
+  inputs,
+  ...
+}: {
   flake.homeModules.neovimLsp = {...}: {
     programs.nvf.settings.vim = {
       lsp.enable = true;
@@ -9,7 +13,7 @@
           lsp.enable = true;
           treesitter.enable = true;
           format.enable = true;
-          format.type = [ "alejandra" ];
+          format.type = ["alejandra"];
         };
 
         bash = {

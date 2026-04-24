@@ -1,8 +1,13 @@
-{ self, inputs, lib, ... }: {
+{
+  self,
+  inputs,
+  lib,
+  ...
+}: {
   # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   #   IMPORTS
   # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  imports = [ inputs.flake-file.flakeModules.default ];
+  imports = [inputs.flake-file.flakeModules.default];
 
   # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   #   FLAKE CONFIG
@@ -29,15 +34,13 @@
         ];
       }
     '';
-
-
   };
   systems = ["x86_64-linux"];
 
   # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   #   COMMON HOST MODULE
   # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  flake.nixosModules.hostCommon = { pkgs, ... }: {
+  flake.nixosModules.hostCommon = {pkgs, ...}: {
     # ── Imports ────────────────────────────────────────────────────────────
     imports = [
       self.nixosModules.home-manager
@@ -67,7 +70,7 @@
     services.openssh.enable = true;
 
     # ── System Config ──────────────────────────────────────────────────────
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    nix.settings.experimental-features = ["nix-command" "flakes"];
 
     nix.gc = {
       automatic = true;
@@ -81,5 +84,4 @@
       persistent = true;
     };
   };
-
 }

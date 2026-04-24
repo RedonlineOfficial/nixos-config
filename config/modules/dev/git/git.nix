@@ -1,9 +1,13 @@
-{ self, inputs, ... }: {
-  flake.nixosModules.git = { ... }: {
+{
+  self,
+  inputs,
+  ...
+}: {
+  flake.nixosModules.git = {...}: {
     programs.git.enable = true;
   };
 
-  flake.homeModules.git = { lib, ... }: {
+  flake.homeModules.git = {lib, ...}: {
     programs.git = {
       enable = true;
       settings = {
@@ -17,5 +21,3 @@
     };
   };
 }
-
-

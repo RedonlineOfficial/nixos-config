@@ -1,5 +1,5 @@
-{ inputs, ... }: {
-  flake.homeModules.neovimOptions = { ... }: {
+{inputs, ...}: {
+  flake.homeModules.neovimOptions = {...}: {
     programs.nvf.settings.vim = {
       options = {
         # ── General ──────────────────────────────────────────────────────
@@ -39,7 +39,6 @@
         # ── Indentation ──────────────────────────────────────────────────
         smartindent = true;
         autoindent = true;
-
 
         # ── Search ───────────────────────────────────────────────────────
         ignorecase = true;

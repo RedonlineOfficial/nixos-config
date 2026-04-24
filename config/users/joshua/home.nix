@@ -1,5 +1,9 @@
-{ self, inputs, ... } : {
-  flake.homeModules.joshuaHome = { ... }: {
+{
+  self,
+  inputs,
+  ...
+}: {
+  flake.homeModules.joshuaHome = {...}: {
     imports = [
       self.homeModules.profilesCommon
     ];

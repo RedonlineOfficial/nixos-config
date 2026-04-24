@@ -1,5 +1,9 @@
-{ self, inputs, ... }: {
-  flake.nixosModules.ssh = { ... }: {
+{
+  self,
+  inputs,
+  ...
+}: {
+  flake.nixosModules.ssh = {...}: {
     services.openssh = {
       enable = true;
       settings = {
