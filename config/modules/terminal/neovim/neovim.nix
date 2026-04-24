@@ -22,6 +22,7 @@
       self.homeModules.neovimLsp
       self.homeModules.neovimKeymaps
       self.homeModules.neovimPlugins
+      self.homeModules.neovimAutocmds
     ];
 
     programs.nvf = {
