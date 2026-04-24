@@ -1,5 +1,5 @@
-{ self, inputs, ... }: {
-  flake.homeModules.userJoshuaHome = { ... }: {
+{ self, inputs, ... } : {
+  flake.homeModules.joshuaHome = { ... }: {
     imports = [
       self.homeModules.profilesCommon
     ];

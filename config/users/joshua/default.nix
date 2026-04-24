@@ -9,9 +9,9 @@
     home-manager.users."joshua".imports = [ self.homeModules.userJoshuaHome ];
   };
 
-  flake.homeConfigurations.userJoshua = inputs.home-manager.lib.homeManagerConfiguration {
+  flake.homeConfigurations.joshua = inputs.home-manager.lib.homeManagerConfiguration {
     modules = [ 
-      self.homeModules.userJoshuaHome 
+      self.homeModules.joshuaHome 
     ];
     pkgs = import inputs.nixpkgs {
       system = "x86_64-linux";
