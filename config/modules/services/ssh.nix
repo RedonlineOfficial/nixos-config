@@ -13,4 +13,4 @@
       startAgent = true;
     };
   };
-};
+}

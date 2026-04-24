@@ -8,4 +8,4 @@
       self.nixosModules.userJoshua
     ];
   };
-};
+}
