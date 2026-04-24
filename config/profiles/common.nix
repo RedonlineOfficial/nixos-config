@@ -9,6 +9,7 @@
   flake.homeModules.profilesCommon = { ... }: {
     imports = [
       self.homeModules.git
+      self.homeModules.neovim
     ];
   };
 }
