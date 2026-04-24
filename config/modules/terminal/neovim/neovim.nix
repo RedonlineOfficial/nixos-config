@@ -8,6 +8,7 @@
       inputs.nvf.homeManagerModules.default
 
       self.homeModules.neovimOptions
+      self.homeModules.neovimLsp
     ];
 
     programs.nvf = {
