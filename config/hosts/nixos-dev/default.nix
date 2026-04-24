@@ -1,11 +1,11 @@
 { self, inputs, ... }: {
-  flake.nixosConfigurations.hostNixos-dev = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.nixos-dev = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
 
     modules = [
       self.nixosModules.hostCommon
-      self.nixosModules.hostNixos-devConfiguration
-      self.nixosModules.hostNixos-devHardware
+      self.nixosModules.nixos-devConfiguration
+      self.nixosModules.nixos-devHardware
       self.nixosModules.userJoshua
     ];
   };

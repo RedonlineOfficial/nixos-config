@@ -2,7 +2,7 @@
 # and may be overwritten by future invocations.  Please make changes
 # to /etc/nixos/configuration.nix instead.
 { self, inputs, ... }: {
-  flake.nixosModules.hostNixos-devHardware = { config, lib, pkgs, modulesPath, ... }: {
+  flake.nixosModules.nixos-devHardware = { config, lib, pkgs, modulesPath, ... }: {
     imports =
       [ (modulesPath + "/profiles/qemu-guest.nix")
       ];
