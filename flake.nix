@@ -11,6 +11,7 @@
     };
 
   inputs = {
+    claude-code.url = "github:sadjow/claude-code-nix";
     flake-file.url = "github:vic/flake-file";
     flake-parts.url = "github:hercules-ci/flake-parts";
     home-manager = {
