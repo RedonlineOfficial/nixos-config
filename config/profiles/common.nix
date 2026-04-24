@@ -8,6 +8,7 @@
       self.nixosModules.git
       self.nixosModules.ssh
       self.nixosModules.neovim
+      self.nixosModules.zsh
     ];
   };
 
@@ -15,6 +16,7 @@
     imports = [
       self.homeModules.git
       self.homeModules.neovim
+      self.homeModules.zsh
     ];
   };
 }
