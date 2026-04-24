@@ -8,7 +8,7 @@
       enable = true;
       userName = lib.mkDefault "RedonlineOfficial";
       userEmail = lib.mkDefault "dev@redonline.me";
-      config = {
+      settings = {
         init.defaultBranch = "main";
         core.editor = "nvim -f";
         pull.rebase = false;
