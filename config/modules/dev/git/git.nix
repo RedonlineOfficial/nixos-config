@@ -12,7 +12,7 @@
         init.defaultBranch = "main";
         core.editor = "nvim -f";
         pull.rebase = false;
-        commit.template = ./gitcommit;
+        commit.template = "${./gitcommit}";
       };
     };
   };
