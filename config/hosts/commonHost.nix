@@ -21,7 +21,16 @@
 
     # ── Outputs ────────────────────────────────────────────────────────────
     #outputs = "flake-parts";
-    outputs = "inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./config)";
+    outputs = ''
+      inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} {
+        imports = [
+          (inputs.import-tree ./config)
+          inputs.home-manager.flakeModules.default
+        ];
+      }
+    '';
+
+
   };
   systems = ["x86_64-linux"];
 
