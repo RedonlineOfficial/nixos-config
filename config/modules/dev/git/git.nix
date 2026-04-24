@@ -6,11 +6,11 @@
   flake.homeModules.git = { lib, ... }: {
     programs.git = {
       enable = true;
-      userName = lib.mkDefault "RedonlineOfficial";
-      userEmail = lib.mkDefault "dev@redonline.me";
       settings = {
         init.defaultBranch = "main";
         core.editor = "nvim -f";
+        user.name = lib.mkDefault "RedonlineOfficial";
+        user.email = lib.mkDefault "dev@redonline.me";
         pull.rebase = false;
         commit.template = "${./gitcommit}";
       };
