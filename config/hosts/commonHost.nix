@@ -20,8 +20,10 @@
     };
 
     # ── Outputs ────────────────────────────────────────────────────────────
+    #outputs = "flake-parts";
     outputs = "inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./config)";
   };
+  systems = ["x86_64-linux"];
 
   # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   #   COMMON HOST MODULE
