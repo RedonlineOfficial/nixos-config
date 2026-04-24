@@ -6,7 +6,7 @@
   flake.homeModules.neovim = {...}: {
     imports = [inputs.nvf.homeManagerModules.default];
 
-    programs.nvf {
+    programs.nvf = {
       enable = true;
     };
   };
