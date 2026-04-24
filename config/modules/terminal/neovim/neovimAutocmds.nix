@@ -1,4 +1,8 @@
-{ self, inputs, ... }: {
+{
+  self,
+  inputs,
+  ...
+}: {
   flake.homeModules.neovimAutocmds = {...}: {
     programs.nvf.settings.vim = {
       luaConfigRC.autocmds = ''
@@ -11,7 +15,6 @@
           end,
         })
       '';
-
     };
   };
-};
+}
