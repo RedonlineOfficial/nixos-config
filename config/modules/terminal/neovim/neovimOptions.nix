@@ -1,6 +1,6 @@
 { inputs, ... }: {
   flake.homeModules.neovimOptions = { ... }: {
-    programs.nvf.vim = {
+    programs.nvf.settings.vim = {
       options = {
         # ── General ──────────────────────────────────────────────────────
         selection = "inclusive";
