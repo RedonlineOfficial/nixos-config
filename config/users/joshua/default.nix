@@ -8,6 +8,10 @@
   };
 
   flake.nixosModules.userJoshua = {pkgs, ...}: {
+    imports = [
+      self.nixosModules.profiles-desktopHyprland
+    ];
+
     users.users.joshua = {
       isNormalUser = true;
       description = "Joshua Myers";

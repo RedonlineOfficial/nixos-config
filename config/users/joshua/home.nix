@@ -6,6 +6,7 @@
   flake.homeModules.joshuaHome = {pkgs, ...}: {
     imports = [
       self.homeModules.profilesCommon
+      self.homeModules.profiles-desktopHyprland
     ];
     home.username = "joshua";
     home.homeDirectory = "/home/joshua";
