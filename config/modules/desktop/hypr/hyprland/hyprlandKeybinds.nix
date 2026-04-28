@@ -54,8 +54,8 @@
         "$mainMod SHIFT, r, exec, hyprctl reload"
 
         # Master Layout
-        "$mainMod, p, addmaster"
-        "$mainMod SHIFT, p, removemaster"
+        "$mainMod, p, layoutmsg, addmaster"
+        "$mainMod SHIFT, p, layoutmsg, removemaster"
 
         # Window states
         "$mainMod SHIFT, f, fullscreen, 0 toggle"
