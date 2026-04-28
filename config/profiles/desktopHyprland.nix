@@ -8,6 +8,7 @@
   flake.homeModules.profiles-desktopHyprland = {
     imports = [
       self.homeModules.desktop-hyprland
+      self.homeModules.hyprpaper
     ];
   };
 }
