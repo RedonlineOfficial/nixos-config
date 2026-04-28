@@ -3,7 +3,7 @@
   inputs,
   ...
 }: {
-  flake.homeModules.desktop-hyprlandOptions.nix = {...}: {
+  flake.homeModules.desktop-hyprlandOptions = {...}: {
     wayland.windowManager.hyprland.settings = {
       general = {
         border_size = 1;
