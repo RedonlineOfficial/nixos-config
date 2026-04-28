@@ -9,6 +9,7 @@
     imports = [
       self.homeModules.desktop-hyprland
       self.homeModules.hyprpaper
+      self.homeModules.kitty
     ];
   };
 }
