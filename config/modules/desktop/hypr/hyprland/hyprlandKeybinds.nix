@@ -81,14 +81,18 @@
 
       submaps = {
         resize_window = {
-          settings.binde = [
-            ", h, resizeactive, -10 0"
-            ", j, resizeactive, 0 10"
-            ", k, resizeactive, 0 -10"
-            ", l, resizeactive, 10 0"
+          settings = {
+            binde = [
+              ", h, resizeactive, -10 0"
+              ", j, resizeactive, 0 10"
+              ", k, resizeactive, 0 -10"
+              ", l, resizeactive, 10 0"
+            ];
 
-            ", esc, submap, reset"
-          ];
+            bind = [
+              ", esc, submap, reset"
+            ];
+          };
         };
       };
     };
