@@ -26,7 +26,7 @@
         (inputs.import-tree ./modules) 
         inputs.home-manager.flakeModules.default 
       ]; 
-    };
+    }
   '';
 
   flake.nixosModules.base = { pkgs, ... }: { 
