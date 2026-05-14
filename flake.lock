@@ -162,7 +162,7 @@
         "type": "github"
       }
     },
-    "nix-hardware": {
+    "nixos-hardware": {
       "locked": {
         "lastModified": 1778593042,
         "narHash": "sha256-xYGrSg6354UK2K4WSQd4+TfyvfqmvFbSY+ZtGQUXK0c=",
@@ -256,7 +256,7 @@
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "import-tree": "import-tree",
-        "nix-hardware": "nix-hardware",
+        "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
         "nixpkgs-stable": "nixpkgs-stable",
         "nvf": "nvf"

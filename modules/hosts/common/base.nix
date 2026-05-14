@@ -1,4 +1,34 @@
 { self, inputs, ... }: {
+  flake-file.inputs = {
+    # Nixpkgs
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    # Nixpkgs stable fallback
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
+
+    # Nix hardware
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
+
+    # Dendritic Tools
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    flake-file.url = "github:denful/flake-file";
+    import-tree.url = "github:denful/import-tree";
+
+    # Home-manager
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+  };
+
+  flake-file.outputs = # nix
+  ''
+    inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } { 
+      imports = [ 
+        (inputs.import-tree ./modules) 
+        inputs.home-manager.flakeModules.default 
+      ]; 
+    };
+  '';
+
   flake.nixosModules.base = { pkgs, ... }: { 
     imports = [
       # Home Manager
@@ -8,6 +38,8 @@
         home-manager.useUserPackages = true;
         home-manager.backupFileExtension = "hm-bk";
       }
+
+      inputs.nixos-hardware.nixosModules.common-pc
     ];
 
     boot = {
