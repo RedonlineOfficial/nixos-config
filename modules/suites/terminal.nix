@@ -10,6 +10,7 @@
       self.homeModules.zsh
       self.homeModules.zoxide
       self.homeModules.lsd
+      self.homeModules.nvf
     ];
   };
 }
