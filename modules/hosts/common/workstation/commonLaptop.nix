@@ -7,9 +7,13 @@
 
   flake.nixosModules.commonLaptop = { ... }: {
     imports = [
+      # Inputs
+      inputs.auto-cpufreq.nixosModules.default
+
       # Hardware
       inputs.nixos-hardware.nixosModules.common-pc-laptop
 
+      # Workstation Module
       self.nixosModules.commonWorkstation
     ];
 

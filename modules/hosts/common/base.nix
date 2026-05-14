@@ -9,6 +9,10 @@
     # Nix hardware
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
+    # Disko
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
+
     # Dendritic Tools
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-file.url = "github:denful/flake-file";
