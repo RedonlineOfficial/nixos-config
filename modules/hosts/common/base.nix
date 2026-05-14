@@ -25,6 +25,7 @@
       imports = [ 
         (inputs.import-tree ./modules) 
         inputs.home-manager.flakeModules.default 
+        inputs.flake-file.flakeModules.dendritic
       ]; 
     }
   '';
