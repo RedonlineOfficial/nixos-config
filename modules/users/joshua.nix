@@ -1,6 +1,8 @@
 { self, inputs, ... }: {
   flake.nixosModules.joshua = { pkgs, ... }: {
-    imports = [];
+    imports = [
+      self.nixosModules.suiteTerminal
+    ];
     users.users.joshua = {
       description = "Joshua Myers";
       isNormalUser = true;
@@ -8,6 +10,7 @@
         "wheel"
         "networkmanager"
       ];
+      shell = pkgs.zsh;
       packages = [ inputs.home-manager.packages.x86_64-linux.home-manager ];
     };
     home-manager.users.joshua.imports = [ self.homeModules.joshua ];
@@ -23,7 +26,9 @@
   };
 
   flake.homeModules.joshua = { pkgs, ... }: {
-    imports = [];
+    imports = [
+      self.homeModules.suiteTerminal
+    ];
     home = {
       username = "joshua";
       homeDirectory = "/home/joshua";
