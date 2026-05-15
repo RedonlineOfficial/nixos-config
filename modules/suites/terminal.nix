@@ -11,6 +11,11 @@
       self.homeModules.zoxide
       self.homeModules.lsd
       self.homeModules.nvf
+      self.homeModules.ripgrep
+      self.homeModules.fd
+      self.homeModules.fzf
+      self.homeModules.bat
+      self.homeModules.btop
     ];
   };
 }
