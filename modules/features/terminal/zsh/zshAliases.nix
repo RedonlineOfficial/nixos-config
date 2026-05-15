@@ -4,7 +4,7 @@
 
       nos = "rebuild-nix";
       hms = "rebuild-home";
-      noc = "cd ~/nixos-config";
+      noc = "cd ~/nixos-config && nvim .";
 
       shutdown = "sudo shutdown now";
       reboot = "sudo reboot";
@@ -13,19 +13,17 @@
       ".." = "cd ..";
       "2." = "cd ../../";
       "3." = "cd ../../../";
-      "4." = "cd ../../../";
-      "5." = "cd ../../../";
+      "4." = "cd ../../../../";
+      "5." = "cd ../../../../../";
 
       mkd = "mkdir -pv";
       cp = "cp -ir";
       mv = "mv -i";
       rm = "rm -ir";
       rmd = "rmdir";
-      grep = "grep --color=auto";
-      fgrep = "fgrep --color=auto";
-      egrep = "egrep --color=auto";
-      fd = "find . -type d -name";
-      ff = "find . -type f -name";
+      grep = "rg";
+      cat = "bat --paging=never";
+      catp = "bat";
 
       gi = "git init";
       gic = "git init && git commit --allow-empty -m 'chore: init' && git tag -a v0.0.0 -m 'v0.0.0: Project init'";
@@ -33,9 +31,7 @@
       gl = "git log --oneline --graph --decorate";
       ga = "git add";
       gc = "git commit -v";
-      gac = "git add --all && git commit -v";
       gca = "git commit -v --amend";
-      gaca = "git add --all && git commit -v --amend";
       gco = "git checkout";
       gcm = "git checkout main";
       gcb = "git checkout -b";
@@ -63,7 +59,9 @@
       ":q" = "exit";
 
       reload = "exec zsh";
+      top = "btop";
+      clive = "claude";
+      ccc = "cd ~/projects/claude-config && nvim .";
     };
-
   };
 }
