@@ -1,8 +1,7 @@
 { self, inputs, ... }: {
   flake.homeModules.zshPrompt = { ... }: {
-    programs.zsh.initContent = ''
-      # bash
-
+    programs.zsh.initContent = # zsh
+    ''
       if [ $TERM = "linux" ]; then
         PROMPT_SYM=">"
         GIT_BRANCH_SYM="@"
