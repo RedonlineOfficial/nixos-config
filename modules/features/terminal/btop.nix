@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.homeModules.CHANGEME = { ... }: {
+  flake.homeModules.btop = { ... }: {
     programs.btop = {
       enable = true;
     };
