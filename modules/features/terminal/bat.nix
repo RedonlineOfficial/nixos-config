@@ -1,6 +1,7 @@
 { self, inputs, ... }: {
-  flake.homeModules.CHANGEME = { ... }: {
-    enable = true;
+  flake.homeModules.bat = { ... }: {
+    programs.bat = {
+      enable = true;
+    };
   };
 }
-
