@@ -3,9 +3,6 @@
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # Nixpkgs stable fallback
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
-
     # Nix hardware
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
@@ -77,7 +74,6 @@
     };
 
     environment.systemPackages = with pkgs; [
-      neovim
       git
     ];
   };
