@@ -4,7 +4,7 @@
 
       nos = "rebuild-nix";
       hms = "rebuild-home";
-      noc = "cd ~/nixos-config && nvim .";
+      noc = "cd ~/projects/nixos-config && nvim .";
 
       shutdown = "sudo shutdown now";
       reboot = "sudo reboot";
