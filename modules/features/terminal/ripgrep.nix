@@ -2,7 +2,7 @@
   flake.homeModules.ripgrep = { ... }: {
     programs.ripgrep = {
       enable = true;
-      argumnets = [
+      arguments = [
         "--smart-case"
         "--pretty"
       ];
