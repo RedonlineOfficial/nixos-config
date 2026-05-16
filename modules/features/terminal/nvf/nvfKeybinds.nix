@@ -13,9 +13,9 @@
         "<C-l>" = { action = "<C-w>l"; desc = "Move to right split"; };
 
         "<C-Left>" = { action = ":resize -2 <CR>"; silent = true; desc = "Shrink split width"; }; 
-        "<C-Down>" = { action = ":resize -2 <CR>"; silent = true; desc = "Grow split height"; }; 
-        "<C-Up>" = { action = ":resize -2 <CR>"; silent = true; desc = "Shrink split height"; }; 
-        "<C-Right>" = { action = ":resize -2 <CR>"; silent = true; desc = "Grow split width"; }; 
+        "<C-Down>" = { action = ":vertical resize +2 <CR>"; silent = true; desc = "Grow split height"; }; 
+        "<C-Up>" = { action = ":vertial resize -2 <CR>"; silent = true; desc = "Shrink split height"; }; 
+        "<C-Right>" = { action = ":resize +2 <CR>"; silent = true; desc = "Grow split width"; }; 
 
         "<leader>w" = { action = "<cmd>w<CR>"; desc = "Save"; };
         "<leader>x" = { action = "<cmd>x<CR>"; desc = "Save & Exit"; };
