@@ -3,13 +3,13 @@
     programs.zsh.initContent = # bash
       ''
         function rebuild-nix() {
-          local confDir="''${1:-"$HOME/nixos-config"}"
+          local confDir="''${1:-"$HOME/projects/nixos-config"}"
           local host="''${2:-$(hostname -s)}"
           sudo nixos-rebuild switch --flake $confDir#$host
         }
 
         function rebuild-home() {
-          local confDir="''${1:-"$HOME/nixos-config"}"
+          local confDir="''${1:-"$HOME/projects/nixos-config"}"
           local user="''${2:-$(whoami)}"
           home-manager switch -b backup --flake $confDir#$user
         }
