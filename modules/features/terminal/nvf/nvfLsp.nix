@@ -7,7 +7,7 @@
         enable = true;
         setupOpts.format_on_save = {
           timeout_ms = 500;
-          lsp_fallback = true;
+          lsp_format = "fallback";
         };
       };
 
@@ -23,8 +23,9 @@
           lsp.enable = true;
           lsp.servers = [ "nixd" ];
           treesitter.enable = true;
-          format.enable = true;
-          format.type = [];
+          format.enable = false;
+          # TODO: Determine which formatter I want to use.
+          #format.type = [];
         };
       };
     };
