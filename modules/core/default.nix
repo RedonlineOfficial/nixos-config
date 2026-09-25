@@ -3,6 +3,7 @@
   # Do not declare or define options here; put them in their own module.
   flake.modules.nixos.core = { ... }: {
     imports = with self.modules.nixos; [
+      core-base
       core-disko
     ];
   };
