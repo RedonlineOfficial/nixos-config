@@ -8,23 +8,21 @@
 
     # --- Nix ----------------------------------------------------------------------------
     nix = {
-      settings.experimental-features = [
-        "flakes"
-        "nix-command"
-      ];
+      settings = {
+        # Enable flakes
+        experimental-features = [
+          "flakes"
+          "nix-command"
+        ];
 
-      gc = {
-        automatic = true;
-        dates = "Sun 00:00:00";
-        persistent = true;
-        options = "--delete-older-than 14d";
+        # Optimization
+        # Gets triggered on every build, mainly autoUpgrade
+        auto-optimise-store = true;
       };
 
-      optimise = {
-        automatic = true;
-        dates = "Sun 01:00:00";
-        persistent = true;
-      };
+      # Garbage Collection
+      # Runs from autoUpgrade (role/workstation.nix) and uses gc.options
+      gc.options = "--delete-older-than 14d";
     };
 
     # --- Nixpkgs ------------------------------------------------------------------------
